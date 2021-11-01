@@ -1,0 +1,28 @@
+body .ant-layout-header {
+    height: 44px;
+    line-height: 44px;
+}
+
+.ant-layout .trigger {
+    padding: 0 24px;
+    font-size: 18px;
+    line-height: 44px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+  
+.ant-layout .trigger:hover {
+    color: #1890ff;
+}
+  
+.ant-layout .logo {
+    height: 32px;
+    margin: 15px;
+    background: transparent;
+    background-image: url('../utilitarios/imagens/tractian-logo.PNG');
+    background-size: cover;
+}
+  
+.ant-layout .site-layout-background {
+    background: #fff;
+}
