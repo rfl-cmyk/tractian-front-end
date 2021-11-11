@@ -1,0 +1,30 @@
+.ant-card {
+    width: 235px;
+    float: left;
+    margin: 10px;
+    background-color: #f0f2f5;
+    transition: 200ms;
+}
+
+.ant-card:hover {
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3); 
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+    transition: 200ms;
+}
+
+body .ant-card-actions {
+    background-color: #f0f2f5;
+    border-top: 1px solid #e1e1e1;
+}
+
+body .ant-card-actions > li:not(:last-child) {
+    border-right: 1px solid #e1e1e1;
+}
+
+body .ant-card-actions > li > span {
+    cursor: auto;
+}
+
+.ant-card img {
+    height: 200px;
+}

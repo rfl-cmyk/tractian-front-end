@@ -1,0 +1,28 @@
+.erro404 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.erro404__conteudo {
+    width: 250px;
+    text-align: center;
+}
+
+.erro404 h1 {
+    color: red;
+    font-size: 18pt;
+}
+
+.erro404 h3 {
+    line-height: 18px;
+}
+
+.erro404__img404 {
+    background-image: url('../../utilitarios/imagens/erro404.jpg');
+    background-size: cover;
+    width: 250px;
+    height: 200px;
+}

@@ -1,0 +1,22 @@
+.ativo div {
+    width: 46%;
+    height: 350px;
+    float: left;
+    margin: 10px;
+    background-color: #f0f2f5;
+}
+.ativo__img {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.anticon-info-circle {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .ativo div {
+        width: 100%;
+    }
+}

@@ -1,15 +1,26 @@
+// https://otaviopalma.github.io/tractian-front/#/home
+// https://github.com/OtavioPalma/tractian-front
+
 import React from 'react';
 import './App.css';
 
+import { BrowserRouter } from 'react-router-dom';
+
+import { GlobalContextProvider } from './contexts/Global.Context';
+
 import 'antd/dist/antd.css';
 
-import Template from './template/Template'
+import Template from './componentes/template/Template'
 
 function App() {
 
   return (
     <div className="App">
-      <Template></Template>
+      <BrowserRouter>
+        <GlobalContextProvider>
+          <Template />
+        </GlobalContextProvider>
+      </BrowserRouter>
     </div>
   );
 }
