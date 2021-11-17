@@ -2,7 +2,7 @@ export const tradStatus = status => {
     var estado = [{ est: '', cor: '' }];
 
     switch (status) {
-        case 'inAlert':
+        case 'inDowntime':
             estado.est = 'Em Parada';
             estado.cor = 'red';
             break;
@@ -21,10 +21,10 @@ export const tradStatus = status => {
     return estado;
 }
 
-export const tradModel = status => {
+export const tradModel = model => {
     var modelo = '';
 
-    if(status === 'motor') {
+    if(model === 'motor') {
         modelo = 'Motor'
     } else {
         modelo = 'Ventilador'

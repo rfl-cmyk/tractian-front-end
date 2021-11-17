@@ -1,7 +1,8 @@
 import { useContext } from 'react';
 import { tradStatus, tradModel } from '../../../utilitarios/traducoes/traducoes';
 import { GlobalContext } from '../../../contexts/Global.Context';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
+import { Breadcrumb } from 'antd';
 
 import './ativo.css';
 
@@ -19,25 +20,32 @@ const Ativo = () => {
         {
         !ativo ?
         navigate("*") :
-        <div className="ativo">
-            <div className="ativo__img" style={{backgroundImage: `url("${ativo.image}")`}}></div>
-            <div>
-                <ul>
-                    <li>{tradStatus(ativo.status).est}</li>
-                    {ativo.sensors ? <li>{ativo.sensors}</li> : null}
-                    {ativo.model ? <li>{tradModel(ativo.model)}</li> : null}
-                </ul>
+        <>
+            <Breadcrumb separator=">">
+                <Breadcrumb.Item><Link to="/">Home</Link></Breadcrumb.Item>
+                <Breadcrumb.Item><Link to="/ativos">Ativos</Link></Breadcrumb.Item>
+                <Breadcrumb.Item>{ativo.name}</Breadcrumb.Item>
+            </Breadcrumb>
+            <div className="ativo">
+                <div className="ativo__img" style={{backgroundImage: `url("${ativo.image}")`}}></div>
+                <div>
+                    <ul>
+                        <li>{tradStatus(ativo.status).est}</li>
+                        {ativo.sensors ? <li>{ativo.sensors}</li> : null}
+                        {ativo.model ? <li>{tradModel(ativo.model)}</li> : null}
+                    </ul>
+                </div>
+                <div>
+                    {ativo.metrics.lastUptimeAt ? <p>{ativo.metrics.lastUptimeAt}</p> : null}
+                    <p>some messages...some messages...</p>
+                    <p>some messages...some messages...</p>
+                </div>
+                <div>
+                    <p>some messages...some messages...</p>
+                    <p>some messages...some messages...</p>
+                </div>
             </div>
-            <div>
-                {ativo.name ? <p>{ativo.name}</p> : null}
-                <p>some messages...some messages...</p>
-                <p>some messages...some messages...</p>
-            </div>
-            <div>
-                <p>some messages...some messages...</p>
-                <p>some messages...some messages...</p>
-            </div>
-        </div>
+        </>
         }
         </>
     )

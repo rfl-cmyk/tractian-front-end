@@ -6,16 +6,27 @@ export const GlobalContext = createContext()
 export function GlobalContextProvider({ children }) {
 
     const [ativos, setAtivos] = useState([]);
+    const [usuarios, setUsuarios] = useState([]);
+    const [empresas, setEmpresas] = useState([]);
+    const [unidades, setUnidades] = useState([]);
 
     useEffect(() => {
-        Api.get(`assets`)
-        .then((responsta) => {
-          setAtivos(responsta.data);
+        Api.get(`db`)
+        .then((resposta) => {
+          setAtivos(resposta.data.assets);
+          setUsuarios(resposta.data.users);
+          setEmpresas(resposta.data.companies);
+          setUnidades(resposta.data.units);
         });
-    }, [setAtivos]);
+    }, []);
 
     return(
-        <GlobalContext.Provider value={{ ativos, setAtivos }}>
+        <GlobalContext.Provider value={{
+            ativos, setAtivos,
+            usuarios, setUsuarios,
+            empresas, setEmpresas,
+            unidades, setUnidades
+        }}>
             { children }
         </GlobalContext.Provider>
     )

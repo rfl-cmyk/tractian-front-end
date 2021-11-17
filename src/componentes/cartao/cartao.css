@@ -1,0 +1,28 @@
+.cartao .ant-card-cover {
+    float: left;
+    margin: 10px;
+}
+
+.cartao .ant-card-cover svg {
+    font-size: 30pt;
+    color: #1890ff;
+}
+
+.cartao .ant-card-body {
+    padding: 5px;
+}
+
+.cartao .ant-card-body ul {
+    margin-left: 25px;
+}
+
+.cartao .ant-card-body ul li {
+    list-style: none;
+    color: rgba(0, 0, 0, 0.45);
+}
+
+.cartao .ant-card-body ul li:first-child {
+    font-weight: 500;
+    font-size: 12pt;
+    color: rgba(0, 0, 0, 0.85);
+}

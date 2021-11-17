@@ -30,11 +30,7 @@ export function BotaoRemover(props) {
 
 export function BotaoEditar(props) {
 
-    function edita(props) {
-        Api.delete(`${props.url}/${props.id}`)
-    }
-
-    return <Button title="Editar" shape="circle" type="primary" ghost onClick={() => edita(props)}><EditOutlined /></Button>
+    return <Button title="Editar" shape="circle" type="primary" ghost onClick={props.onclick}><EditOutlined /></Button>
 }
 
 export function BotaoDetalhes(props) {

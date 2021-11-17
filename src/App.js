@@ -1,9 +1,5 @@
-// https://otaviopalma.github.io/tractian-front/#/home
-// https://github.com/OtavioPalma/tractian-front
-
 import React from 'react';
 import './App.css';
-
 import { BrowserRouter } from 'react-router-dom';
 
 import { GlobalContextProvider } from './contexts/Global.Context';
