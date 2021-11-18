@@ -1,14 +1,50 @@
-.ativo div {
+.ativo__box, .ativo__img {
     width: 46%;
     height: 350px;
     float: left;
     margin: 10px;
     background-color: #f0f2f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .ativo__img {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.ativo ul { padding-left: 0 }
+
+.ativo ul li {
+    list-style: none;
+}
+
+.ativo ul li::before {
+    content: '- ';
+}
+
+.ativo span {
+    font-weight: 600;
+}
+
+body .ant-divider-plain.ant-divider-with-text {
+    font-size: 16pt;
+    margin-top: 0;
+}
+
+.ativo .ant-btn {
+    display: block;
+    margin: 25px auto 0;
+}
+
+.ativo .responsavel {
+    padding: 5px;
+    margin-top: 10px;
+    text-align: center;
+    color: green;
+    border: 1px dashed green;
 }
 
 .anticon-info-circle {

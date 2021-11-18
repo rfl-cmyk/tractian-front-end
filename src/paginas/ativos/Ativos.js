@@ -4,7 +4,6 @@ import Label from '../../componentes/label/Label';
 import { BotaoRemover, BotaoEditar, BotaoDetalhes } from '../../componentes/botoes/Botoes';
 import { Card } from 'antd';
 import LightBox from './lightbox/LightBox';
-
 import { GlobalContext } from '../../contexts/Global.Context';
 
 import './ativos.css';
