@@ -95,12 +95,6 @@ const Ativo = () => {
                         {ativo.metrics.lastUptimeAt ?
                         <p>- Última coleta: <span>{moment(ativo.metrics.lastUptimeAt).locale('pt-br').format('DD [de] MMMM [de] YYYY [às] HH:mm:ss')}</span></p>
                         : null }
-                        {/*{ativo.metrics.totalCollectsUptime ?
-                        <p>Total de Horas Coletadas: {ativo.metrics.totalCollectsUptime}hs</p>
-                        : null }
-                        {ativo.metrics.totalUptime ?
-                        <p>Total de Tempo Trabalhado: {ativo.metrics.totalUptime}hs</p>
-                        : null }*/}
                         <GraficoMetricas totalHoras={ativo.metrics.totalCollectsUptime} totalTempo={ativo.metrics.totalUptime}/>
                     </div>
                 </div>

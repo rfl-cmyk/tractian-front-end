@@ -4,8 +4,6 @@ import highcharts3d from "highcharts/highcharts-3d";
 import cylinder from "highcharts/modules/cylinder";
 import { useEffect } from 'react';
 
-import './graficos.css';
-
 export const GraficoTemp = (props) => {
 
     ChartModuleMore(Highcharts);

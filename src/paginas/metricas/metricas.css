@@ -1,0 +1,26 @@
+.metrica__box {
+    width: 47%;
+    height: 350px;
+    float: left;
+    margin: 10px;
+    background-color: #f0f2f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 290px;
+}
+
+.highcharts-container {
+    margin: 0 auto;
+}
+
+body .ant-divider-plain.ant-divider-with-text {
+    font-size: 16pt;
+    margin-top: 0;
+}
+
+@media (max-width: 946px) {
+    .metrica__box {
+        width: 100%;
+    }
+}
