@@ -1,5 +1,5 @@
 .ativo__box, .ativo__img {
-    width: 46%;
+    width: 47%;
     height: 350px;
     float: left;
     margin: 10px;
@@ -7,6 +7,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: 290px;
+}
+
+.ativo__box:last-child p {
+    text-align: center;
+    padding: 0 10px;
+}
+
+.highcharts-container {
+    margin: 0 auto;
 }
 
 .ativo__img {
@@ -15,7 +25,11 @@
     background-position: center;
 }
 
-.ativo ul { padding-left: 0 }
+.ativo ul {
+    padding-left: 0;
+    width: 175px;
+    margin: 0 auto;
+}
 
 .ativo ul li {
     list-style: none;
@@ -51,8 +65,8 @@ body .ant-divider-plain.ant-divider-with-text {
     display: none;
 }
 
-@media (max-width: 767px) {
-    .ativo div {
+@media (max-width: 946px) {
+    .ativo__box, .ativo__img {
         width: 100%;
     }
 }

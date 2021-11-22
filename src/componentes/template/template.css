@@ -1,10 +1,10 @@
-body .ant-layout-sider {
-    height: 100vh;
-}
-
 body .ant-layout-header {
     height: 44px;
     line-height: 44px;
+}
+
+body .ant-layout-sider {
+    min-height: 100vh;
 }
 
 .conteudo {
@@ -36,3 +36,29 @@ body .ant-layout-header {
 .ant-layout .site-layout-background {
     background: #fff;
 }
+
+.rodape {
+    color: #ddeaff;
+    background-color: #001529;
+    width: 100%;
+    padding: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10pt;
+    text-align: center;
+  }
+  
+  .rodape p {
+    padding: 0 20px;
+    margin: 0;
+  }
+  
+  .rodape a {
+    color: #ddeaff;
+    text-decoration: none;
+  }
+  
+  .rodape a:hover {
+    color: #fff;
+  }

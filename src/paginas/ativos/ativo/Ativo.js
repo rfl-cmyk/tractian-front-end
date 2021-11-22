@@ -6,6 +6,7 @@ import { Breadcrumb, Divider, Button } from 'antd';
 import moment from 'moment';
 import 'moment/locale/pt-br'
 import Responsavel from '../responsavel/Responsavel';
+import { GraficoTemp, GraficoSaude, GraficoMetricas } from './graficos/Graficos';
 
 import './ativo.css';
 
@@ -72,27 +73,35 @@ const Ativo = () => {
                         : null}
                     </div>
                 </div>
+                {ativo.specifications.maxTemp ?
                 <div className="ativo__box">
                     <div>
-                        <Divider plain>Especificações</Divider>
-                        {ativo.specifications.maxTemp ?
-                        <p>Temperatura Máxima: {ativo.specifications.maxTemp}ºC</p>
-                        : null }
-                        {ativo.healthscore ? <p>Saúde: {ativo.healthscore}%</p> : null }
+                        <Divider plain>Temperatura Máxima</Divider>
+                            <GraficoTemp temperatura={ativo.specifications.maxTemp} />
                     </div>
                 </div>
+                : null }
+                {ativo.healthscore ?
+                <div className="ativo__box">
+                    <div>
+                        <Divider plain>Saúde do Ativo</Divider>
+                        <GraficoSaude saude={ativo.healthscore} />
+                    </div>
+                </div>
+                : null }
                 <div className="ativo__box">
                     <div>
                         <Divider plain>Métricas</Divider>
                         {ativo.metrics.lastUptimeAt ?
                         <p>- Última coleta: <span>{moment(ativo.metrics.lastUptimeAt).locale('pt-br').format('DD [de] MMMM [de] YYYY [às] HH:mm:ss')}</span></p>
                         : null }
-                        {ativo.metrics.totalCollectsUptime ?
+                        {/*{ativo.metrics.totalCollectsUptime ?
                         <p>Total de Horas Coletadas: {ativo.metrics.totalCollectsUptime}hs</p>
                         : null }
                         {ativo.metrics.totalUptime ?
                         <p>Total de Tempo Trabalhado: {ativo.metrics.totalUptime}hs</p>
-                        : null }
+                        : null }*/}
+                        <GraficoMetricas totalHoras={ativo.metrics.totalCollectsUptime} totalTempo={ativo.metrics.totalUptime}/>
                     </div>
                 </div>
             </div>

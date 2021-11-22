@@ -5,3 +5,9 @@ body .ant-form-item {
 body .ant-form-item .ant-form-item-label {
     padding-bottom: 0;
 }
+
+@media (max-width: 465px) {
+    html body {
+        width: 100vh;
+    }
+}

@@ -87,6 +87,20 @@ function Template() {
           </Routes>
         </Content>
 
+        <div className="rodape">
+          <div>
+            <p><strong>Toolbox:</strong>&nbsp;
+              <a href="https://ant.design/" rel="noreferrer" target="_blank">ant design (css)</a>,&nbsp;
+              <a href="https://momentjs.com/" rel="noreferrer" target="_blank">momentjs (editor de datas)</a>,&nbsp;
+              <a href="https://www.highcharts.com/" rel="noreferrer" target="_blank">hightcharts (gráficos)</a>,&nbsp;
+              <a href="https://my-json-server.typicode.com/tractian/fake-api" rel="noreferrer" target="_blank">tractian (api).</a>
+            </p>
+            <p><strong>Gitgub:</strong>&nbsp;
+              <a href="https://github.com/rfl-cmyk" rel="noreferrer" target="_blank">Rafael Fratus</a>
+            </p>
+          </div>
+        </div>
+
       </Layout>
     </Layout>
   );
