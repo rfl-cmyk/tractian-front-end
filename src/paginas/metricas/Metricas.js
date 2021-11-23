@@ -33,7 +33,7 @@ function Metricas() {
     return(
         <>
             {
-            !ativos ?
+            !ativos.length ?
             <Spinner /> :
             <div className="metricas">
                 <div className="metrica__box">

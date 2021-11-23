@@ -1,7 +1,7 @@
 import Highcharts from 'highcharts';
+import HighchartsReact from 'highcharts-react-official'
 import highcharts3d from "highcharts/highcharts-3d";
 import cylinder from "highcharts/modules/cylinder";
-import { useEffect } from 'react';
 
 // -------------------------------------------- CYLINDER
 
@@ -9,56 +9,53 @@ export const GraficoCylinder = (props) => {
 
     highcharts3d(Highcharts);
     cylinder(Highcharts);
-  
-    useEffect(() => {
-      Highcharts.chart(props.id, {
 
+    const graficoCylinder = {
         chart: {
-          type: 'cylinder',
-          width: 290,
-          height: 235,
-          backgroundColor: "transparent",
-          options3d: {
-              enabled: true,
-              alpha: 15,
-              beta: 15,
-              depth: 50,
-              viewDistance: 25
-          }
-        },
-        title: {
-            text: undefined
-        },
-        plotOptions: {
-            series: {
-                depth: 25,
-                colorByPoint: true
+            type: 'cylinder',
+            width: 290,
+            height: 235,
+            backgroundColor: "transparent",
+            options3d: {
+                enabled: true,
+                alpha: 15,
+                beta: 15,
+                depth: 50,
+                viewDistance: 25
             }
-        },
-        colors: [props.cor1, props.cor2, props.cor3],
-        xAxis: {
-          categories: [props.categoria1, props.categoria2, props.categoria3],
-          labels: {
-              skew3d: true,
-              style: {
-                  fontSize: '16px'
-              }
-          }
-        },
-        yAxis: {
+          },
           title: {
-            enabled: false
-          }
-        },
-        series: [{
-            data: [props.valor1, props.valor2, props.valor3],
-            name: '',
-            showInLegend: false
-        }]
-      });
-    });
-  
-    return <div id={props.id}></div>
+              text: undefined
+          },
+          plotOptions: {
+              series: {
+                  depth: 25,
+                  colorByPoint: true
+              }
+          },
+          colors: [props.cor1, props.cor2, props.cor3],
+          xAxis: {
+            categories: [props.categoria1, props.categoria2, props.categoria3],
+            labels: {
+                skew3d: true,
+                style: {
+                    fontSize: '16px'
+                }
+            }
+          },
+          yAxis: {
+            title: {
+              enabled: false
+            }
+          },
+          series: [{
+              data: [props.valor1, props.valor2, props.valor3],
+              name: '',
+              showInLegend: false
+          }]
+    }
+
+    return <HighchartsReact highcharts={Highcharts} options={graficoCylinder} />
   
   }
 
@@ -66,8 +63,7 @@ export const GraficoCylinder = (props) => {
 
 export const GraficoCircle = (props) => {
 
-    useEffect(() => {
-      Highcharts.chart(props.id, {
+    const graficoCircle = {
         chart: {
             plotBackgroundColor: null,
             plotBorderWidth: 0,
@@ -109,7 +105,7 @@ export const GraficoCircle = (props) => {
                 }
             ]
         }]
-      })
-    });
-    return <div id={props.id}></div>
+    }
+
+    return <HighchartsReact highcharts={Highcharts} options={graficoCircle} />
 }
